@@ -15,26 +15,27 @@ class interconnect_nd_toros:
         self.adj_matrix = lil_matrix([self.num_of_nodes,self.num_of_nodes])
 
         G = nx.cycle_graph(dims_list[0])
-        nx.draw(G)
+       # nx.draw(G)
 
         for i in range(1,len(dims_list)):
             #I = np.eye(dims_list[0])
             currentG = nx.cycle_graph(dims_list[i])
 
-            print(nx.adjacency_matrix(G).toarray())
+            #print(nx.adjacency_matrix(G).toarray())
             G = nx.algorithms.operators.cartesian_product(G,currentG)
-            print("new G of :"+str(i+1)+" dims")
-            print(nx.adjacency_matrix(G).toarray())
+            #print("new G of :"+str(i+1)+" dims")
+           # print(nx.adjacency_matrix(G).toarray())
            # H = nx.algorithms.operators.cartesian_product(G,H)
-            plt.figure("figure-"+str(i))
-            nx.draw_spectral(G)
+          #  plt.figure("figure-"+str(i))
+         #   nx.draw_spectral(G)
+            self.G = G
             #nx.draw_networkx(G)
-        plt.show()
+        #plt.show()
+
+    def get_G(self):
+        return self.G
 
 
-
-
-
-torus_g = interconnect_nd_toros([3,4,5])
+#torus_g = interconnect_nd_toros([3,4,5])
 
 
