@@ -9,12 +9,12 @@ Possible spectral embedding layouts of 2d and 3d.
 2. From the repository root, install the runtime dependencies declared in `pyproject.toml` with `uv sync`. This will create a `.venv` that uv manages for you.
 3. Whenever you need to run a script, either activate the environment (`source .venv/bin/activate`) or prefix the command with `uv run`, e.g. `uv run python spectral_embedding.py`.
 
-Run `spectral_embedding.py`
+Run `spectral_embedding_nd_torus.py` for torus graphs or `spectral_embedding_cube.py` for cube lattices.
 
 ## Usage
-- Launch the interactive Plotly figure: `uv run python spectral_embedding.py`.
-- Change the spectral embedding dimensionality with `--dim`, e.g. `uv run python spectral_embedding.py --dim 2`.
-- Customize the torus size via `--torus`, e.g. `uv run python spectral_embedding.py --torus 5 6 7`.
+- Torus: `uv run python spectral_embedding_nd_torus.py --torus 5 6 7 --dim 3`.
+- Cube: `uv run python spectral_embedding_cube.py --size 4 --dim 3` (use `--node-size`/`--edge-size` to tweak marker scales). The cube embedding is normalized to fill the unit cube; pass `--no-normalize` to inspect the raw spectral coordinates.
+- Adjust the spectral embedding dimensionality with `--dim` to target 2D or 3D projections.
 
 2d interconnected torus: 
 ![alt text](https://drive.google.com/uc?export=download&id=1zIVDfn8804Bt3L4Hh_-9bmUW2DZBTx4Q)
