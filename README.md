@@ -21,3 +21,5 @@ Run `spectral_embedding_nd_torus.py` for torus graphs or `spectral_embedding_cub
 
 3d interconntected torus: 
 ![alt text](https://drive.google.com/uc?export=download&id=1kAX1Wm1wjlpVBv5HqIlHM0tGTGeohiX0)
+
+<img width="1207" height="1044" alt="Screenshot 2025-12-26 at 23 54 22" src="https://github.com/user-attachments/assets/cd67fe3d-3f26-4a13-a0aa-27d60a449675" />
